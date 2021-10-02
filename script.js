@@ -11,13 +11,13 @@ let botaoMoverBaixo = document.getElementById('mover-baixo');
 let elementoInput = document.getElementById('texto-tarefa');
 let listaLis = document.getElementsByClassName('item-lista');
 
-//criando uma div para guardar texto do botao mover cima//
+//criando uma div para guardar texto do botao mover pra cima//
 let divBotaoMoverCima = document.createElement('div');
 botaoMoverCima.appendChild(divBotaoMoverCima);
 divBotaoMoverCima.id = 'texto-mover-cima';
 divBotaoMoverCima.innerHTML = 'Subir tarefa';
 
-//criando uma div para guardar texto do botao mover cima//
+//criando uma div para guardar texto do botao mover pra baixo//
 let divBotaoMoverBaixo = document.createElement('div');
 botaoMoverBaixo.appendChild(divBotaoMoverBaixo);
 divBotaoMoverBaixo.id = 'texto-mover-baixo';
