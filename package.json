@@ -16,11 +16,15 @@
     "stylelint-config-standard": "20.0.0"
   },
   "dependencies": {
-    "eslint-config-trybe-fundamentals": "^1.1.0"
+    "eslint-config-trybe-fundamentals": "^1.1.0",
+    "gh-pages": "^3.2.3"
   },
+  "homepage": "https://camila-mp.github.io/lista-de-tarefas/",
   "scripts": {
     "cypress:open": "cypress open",
     "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json .",
-    "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input"
+    "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
