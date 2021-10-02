@@ -68,7 +68,7 @@ button#salvar-tarefas {
 }
 
 .item-lista {
-    font-family: monospace;
+    font-family:'Nunito', sans-serif;
     color: darkblue;
 }
 
@@ -128,8 +128,12 @@ button#salvar-tarefas {
 }
 
 #texto-tarefa {
-    display: block;
-    margin: 20px auto 20px auto;    
+    color: black;
     background-color: lightcyan;
+    display: block;
     font-family: sans-serif;
+    font-size: 15px;
+    height: 25px;
+    margin: 20px auto 20px auto;    
+    padding: 4px;
 }

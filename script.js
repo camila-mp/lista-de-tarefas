@@ -53,7 +53,6 @@ botaoRemoverSel.appendChild(divBotaoRemoverSel);
 divBotaoRemoverSel.id = 'texto-botao-remover-sel';
 divBotaoRemoverSel.innerHTML = 'Remover selecionado';
 
-//REQUISITO 5 e 6//
 //função que cria event listener no botao, adiciona value na lista e limpa input//
 
 function criaEventoBotao() {
@@ -68,7 +67,7 @@ function criaEventoBotao() {
 
 criaEventoBotao();
 
-//REQUISITO 7 e 8//
+//altera a cor de fundo da tarefa com um click//
 
 function mudaCorItem() {
   let listaTarefas = document.getElementById('lista-tarefas');
@@ -76,13 +75,11 @@ function mudaCorItem() {
     for (index = 0; index < listaLis.length; index += 1){
       listaLis[index].style.backgroundColor = '';
     }
-      event.target.style.backgroundColor = 'rgb(128, 128, 128)';
+      event.target.style.backgroundColor = 'rgb(68, 240, 185)';
   });
 };
 
 mudaCorItem();
-
-//REQUISITO 9//
 
 //função para riscar elemento com double-click e des-riscar com double-click//
 
@@ -99,7 +96,6 @@ function riscaItem() {
 
 riscaItem();
 
-//REQUISITO 10//
 //função do botão que ao ser clicado limpa a lista//
 
 function apagaTudo() {
@@ -113,7 +109,6 @@ function apagaTudo() {
 
 apagaTudo();
 
-//REQUISITO 11//
 //função do botão que remove itens finalizados da lista//
 
 function removeFinalizados() {
@@ -131,9 +126,7 @@ function removeFinalizados() {
                      
 removeFinalizados();
 
-//REQUISITO 12//
-
-//1-transformar a listaTarefas que é um objeto em uma string e armazenar no local storage//
+//transforma a listaTarefas que é um objeto em uma string e armazenar no local storage//
 
 function salvarLista() {
   localStorage.setItem('listaDeTarefas', listaTarefas.innerHTML);
@@ -150,7 +143,7 @@ window.onload = function () {
   listaTarefas.innerHTML = storageListaString;
 };
 
-//REQUISITO 13 - adicionar event listeners aos botoes de mover e fazer funções especificas para cada um deles//
+//adiciona event listeners aos botoes de mover (para baixo ou para cima) e fazer funções especificas para cada um deles//
 
 function adicionaEventoMoverCima () {
   botaoMoverCima.addEventListener('click', moverCima);
@@ -162,7 +155,7 @@ adicionaEventoMoverCima();
 function moverCima() {
   const listaEstLis = document.querySelectorAll('.item-lista');
   for (index4 = 1; index4 < listaEstLis.length; index4 += 1){
-    if (listaEstLis[index4].style.backgroundColor === 'rgb(128, 128, 128)') {
+    if (listaEstLis[index4].style.backgroundColor === 'rgb(68, 240, 185)') {
       listaTarefas.insertBefore(listaEstLis[index4], listaEstLis[index4].previousSibling);
     };
   };
@@ -177,18 +170,18 @@ adicionaEventoMoverBaixo();
 function moverBaixo() {
   const listaEstLis = document.querySelectorAll('.item-lista');
   for (index5 = 0; index5 < listaEstLis.length - 1; index5 += 1){
-    if (listaEstLis[index5].style.backgroundColor === 'rgb(128, 128, 128)') {
+    if (listaEstLis[index5].style.backgroundColor === 'rgb(68, 240, 185)') {
       listaTarefas.insertBefore(listaEstLis[index5], listaEstLis[index5].nextSibling.nextSibling);
     };
   };
 };
 
-//REQUISITO 14
+//função que remove item selecionado
 
 function adicionaEventoRemoverSel () {
   botaoRemoverSel.addEventListener('click', function () {
     for (index6 = 0; index6 < listaLis.length; index6 += 1){
-      if (listaLis[index6].style.backgroundColor === 'rgb(128, 128, 128)'){
+      if (listaLis[index6].style.backgroundColor === 'rgb(68, 240, 185)'){
         listaLis[index6].remove();
       };
     };
