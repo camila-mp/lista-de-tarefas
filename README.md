@@ -1,5 +1,7 @@
 
-# Acesse a página clicando <a href="https://camila-mp.github.io/lista-de-tarefas/">aqui</a>.
+# Boas vindas ao repositório Lista de Tarefas
+
+Visualize a página do projeto clicando <a href="https://camila-mp.github.io/lista-de-tarefas/">aqui</a>.
 
 # Sobre
 
@@ -12,15 +14,17 @@ A página consiste em uma lista de tarefas com várias funcionalidades, como por
 
 # Como rodar o projeto na sua máquina
 
-1.Clone o repositório com o comando:
+Abra seu Visual Studio code e siga as instruções a seguir.
+
+1. Clone o repositório com o comando:
 `git clone git@github.com:camila-mp/lista-de-tarefas.git`
 
-2.Entre na pasta clonada:
+2. Entre na pasta clonada:
 `cd lista-de-tarefas`
 
-3.Instale as dependências com:
+3. Instale as dependências com:
 `npm install` ou `yarn`
 
-4.Instale a extensão do VS Code Live Server;
+4. Instale a extensão do VS Code Live Server;
 
-5-
+5. Utilize o atalho `Ctrl + Shift + P` no VSCode e procure por `Live Server: Open with Live Server`.
