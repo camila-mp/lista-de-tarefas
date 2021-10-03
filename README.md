@@ -2,7 +2,7 @@
 # Boas vindas ao repositório Lista de Tarefas
 
 Visualize a página do projeto clicando <a href="https://camila-mp.github.io/lista-de-tarefas/">aqui</a>.
-<img src="print-todo-list">
+<img src="print-todo-list.png">
 
 # Sobre
 
