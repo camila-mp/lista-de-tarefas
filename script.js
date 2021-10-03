@@ -11,6 +11,7 @@ const elementoInput = document.getElementById('texto-tarefa');
 const itemLista = 'item-lista';
 const listaLis = document.getElementsByClassName(itemLista);
 const backgroundTarefa = 'rgb(68, 240, 185)';
+const tarefaConcluida = 'item-lista completed';
 
 // criando uma div para guardar texto do botao mover pra cima//
 const divBotaoMoverCima = document.createElement('div');
@@ -85,10 +86,10 @@ mudaCorItem();
 
 function riscaItem() {
   listaTarefas.addEventListener('dblclick', (event) => {
-    if (event.target.className === 'item-lista completed') {
+    if (event.target.className === tarefaConcluida) {
       event.target.className = 'item-lista';
     } else {
-      event.target.className = 'item-lista completed';
+      event.target.className = tarefaConcluida;
     }
   });
 }
@@ -115,7 +116,7 @@ function removeFinalizados() {
   botaoApagaFin.addEventListener('click', () => {
     const filhosListaTarefas = listaTarefas.children;
     for (let index3 = 0; index3 < filhosListaTarefas.length; index3 += 1) {
-      if (filhosListaTarefas[index3].className === 'item-lista completed') {
+      if (filhosListaTarefas[index3].className === tarefaConcluida) {
         filhosListaTarefas[index3].remove();
         index3 -= 1;
       }
@@ -126,17 +127,13 @@ removeFinalizados();
 
 // transforma a listaTarefas que é um objeto em uma string e armazenar no local storage//
 
-function salvarLista() {
-  localStorage.setItem('listaDeTarefas', listaTarefas.innerHTML);
-}
+const salvarLista = () => localStorage.setItem('listaDeTarefas', listaTarefas.innerHTML);
 
-function adicionaEventoSalvar() {
-  botaoSalvar.addEventListener('click', salvarLista);
-}
+const adicionaEventoSalvar = () => botaoSalvar.addEventListener('click', salvarLista);
 
 adicionaEventoSalvar();
 
-window.onload = function () {
+window.onload = () => {
   const storageListaString = localStorage.getItem('listaDeTarefas'); // recupera lista como string//
   listaTarefas.innerHTML = storageListaString;
 };
@@ -151,9 +148,7 @@ function moverCima() {
   }
 }
 
-function adicionaEventoMoverCima() {
-  botaoMoverCima.addEventListener('click', moverCima);
-}
+const adicionaEventoMoverCima = () => botaoMoverCima.addEventListener('click', moverCima);
 
 adicionaEventoMoverCima();
 
@@ -166,9 +161,8 @@ function moverBaixo() {
   }
 }
 
-function adicionaEventoMoverBaixo() {
-  botaoMoverBaixo.addEventListener('click', moverBaixo);
-}
+const adicionaEventoMoverBaixo = () => botaoMoverBaixo.addEventListener('click', moverBaixo);
+
 adicionaEventoMoverBaixo();
 
 // função que remove item selecionado
