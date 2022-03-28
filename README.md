@@ -7,8 +7,8 @@ Visualize a página do projeto clicando <a href="https://camila-mp.github.io/lis
 
 # Sobre
 
-Projeto desenvolvido no curso da Trybe no módulo de Fundamentos do Desenvolvimento Web (6 semanas de curso), com algumas melhorias no código inseridas meses depois.
-A página consiste em uma lista de tarefas com várias funcionalidades, como por exemplo: adicionar tarefa, riscar tarefa concluída, mudar ordem das tarefas, remover uma tarefa e salvar a lista de tarefas.
+Projeto desenvolvido no curso da Trybe no módulo de Fundamentos do Desenvolvimento Web (6 semanas de curso).
+A página consiste em uma lista de tarefas com várias funcionalidades, como: adicionar tarefa, riscar tarefa concluída, mudar ordem das tarefas, remover uma tarefa e salvar a lista de tarefas.
 
 # Tecnologias utilizadas
 
